@@ -8,3 +8,11 @@ export const nextQuestion = (index, respuesta) => {
         trivia: cloneList
     })
 };
+
+export const selectTrivia = (index) => {
+
+
+    store.setState({
+        selectedTriviaIndex: index
+    })
+}
