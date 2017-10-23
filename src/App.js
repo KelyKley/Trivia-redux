@@ -16,11 +16,6 @@ const Social = () => {
 }
 
 const App = ({trivia, selectedPlayerIndex}) =>{
-  const triviaOptions = trivia.map((trivia, index) => {
-    return(
-      <button onClick="">{trivia.opciones}</button>      
-    );
-  })
   return(
     <div id="container">
         <div className="row">
@@ -51,10 +46,6 @@ const App = ({trivia, selectedPlayerIndex}) =>{
         </div>
     </div>
   );
-}
-
-const Options =()=>{
-
 }
 
 const mapToProps = ({trivia, selectedPlayerIndex}) => ({trivia, selectedPlayerIndex});
