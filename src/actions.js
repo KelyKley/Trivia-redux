@@ -13,5 +13,4 @@ export const nextQuestion = (e, index) => {
     store.setState({
         trivia: cloneList
     })
-
 };
