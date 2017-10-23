@@ -46,12 +46,7 @@ const App = ({trivia, selectedTriviaIndex}) =>{
                 </div>
             </div>
             <div id="question">
-                <div id="intro" className="oculto-intro">
-                    <h1>QUIZ</h1>
-                    <p>Al final veras los resultados</p>
-                    <button className="text-center" onClick="">COMENZAR</button>
-                </div>
-                <div id="one"><h3>{trivia[0].pregunta}</h3>
+                <div id="one"><h3>{trivia[selectedTriviaIndex].pregunta}</h3>
                     <Options
                        option={trivia[selectedTriviaIndex].opciones}
                        selectedTriviaIndex={selectedTriviaIndex}
