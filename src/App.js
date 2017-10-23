@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "redux-zero/react";
-import { nextQuestion} from "./actions";
+import { nextQuestion, selectTrivia} from "./actions";
 import './view.css';
 
 const Social = () => {
@@ -15,16 +15,26 @@ const Social = () => {
   );
 }
 
-const App = ({trivia, selectedPlayerIndex}) =>{
-  const triviaOptions = trivia.map((trivia, index) => {
-    return(
-      <button onClick="">{trivia.opciones}</button>      
-    );
+const Options =({option, selectedTriviaIndex, nextQuestion})=>{
+  console.log("option:"+option)
+  let list = option.map((element, index)=>{
+    return (
+      <button key={index} onClick={nextQuestion}>{element}</button>
+    )
   })
+  return (
+    <div>
+        {list}
+    </div>
+  )
+}
+
+const App = ({trivia, selectedTriviaIndex}) =>{
+  console.log('selec->'+selectedTriviaIndex);
   return(
     <div id="container">
         <div className="row">
-            <button className="circle-button"><span className="icon icon-list glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
+          <button className="circle-button"><span className="icon icon-list glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
             <header>
                 <h1 id="imagen-arriba"><img src="assets/img/plane.png" id="image"/></h1>
             </header>
@@ -42,9 +52,10 @@ const App = ({trivia, selectedPlayerIndex}) =>{
                     <button className="text-center" onClick="">COMENZAR</button>
                 </div>
                 <div id="one"><h3>{trivia[0].pregunta}</h3>
-                  <button id="Avianca" onClick="clickme(event);">Avianca</button>
-                  <button id="KLM" onClick="clickme(event);">KLM</button>
-                  <button id="Qantas" onClick="clickme(event);">Qantas</button>
+                    <Options
+                       option={trivia[selectedTriviaIndex].opciones}
+                       selectedTriviaIndex={selectedTriviaIndex}
+                       nextQuestion={(e) => nextQuestion (e, selectedTriviaIndex) } />
                 </div>
             </div>
           <Social/>
@@ -53,11 +64,7 @@ const App = ({trivia, selectedPlayerIndex}) =>{
   );
 }
 
-const Options =()=>{
-
-}
-
-const mapToProps = ({trivia, selectedPlayerIndex}) => ({trivia, selectedPlayerIndex});
+const mapToProps = ({trivia, selectedTriviaIndex}) => ({trivia, selectedTriviaIndex});
 
 export default connect(mapToProps)(App);
 

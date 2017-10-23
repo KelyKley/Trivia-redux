@@ -1,6 +1,10 @@
 import store from './store';
 
-export const nextQuestion = (index, respuesta) => {
+export const nextQuestion = (respuesta, index) => {
+    store.setState({
+        selectedTriviaIndex: index+1
+    })
+
     const cloneList = [...store.getState().trivia];
     cloneList[index].tuRespuesta = respuesta;
 
@@ -8,11 +12,3 @@ export const nextQuestion = (index, respuesta) => {
         trivia: cloneList
     })
 };
-
-export const selectTrivia = (index) => {
-
-
-    store.setState({
-        selectedTriviaIndex: index
-    })
-}
