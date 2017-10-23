@@ -64,11 +64,7 @@ const App = ({trivia, selectedTriviaIndex}) =>{
   );
 }
 
-<<<<<<< HEAD
-const mapToProps = ({trivia, selectedPlayerIndex}) => ({trivia, selectedPlayerIndex});
-=======
 const mapToProps = ({trivia, selectedTriviaIndex}) => ({trivia, selectedTriviaIndex});
->>>>>>> 6aaf8f3d33b0eceea1db385c43b887096bc9368a
 
 export default connect(mapToProps)(App);
 
