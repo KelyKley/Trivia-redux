@@ -36,7 +36,7 @@ const App = ({trivia, selectedTriviaIndex}) =>{
         <div className="row">
           <button className="circle-button"><span className="icon icon-list glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
             <header>
-                <h1 id="imagen-arriba"><img src="assets/img/plane.png" id="image"/></h1>
+                <h1 id="imagen-arriba"><img src={trivia[selectedTriviaIndex].srcImg} id="image"/></h1>
             </header>
             <div className="container">
                 <h4><input id="contador-progresivo" type="button" value="0 de 5"/></h4>

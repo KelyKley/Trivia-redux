@@ -3,7 +3,7 @@ import createStore from 'redux-zero';
 let TRIVIA = [{
             pregunta: "¿Cual fue el primer lenguaje de Programación?",
             opciones: ['tarjetas Perforadas / ADA', 'dev c++', 'FORTRAN ', 'Cobol'],
-            srcImg: 'assets/img/lenguajeProgramacion.jpg',
+            srcImg: './img/lenguajeProgramacion.jpg',
             rptaCorrecta: 'tarjetas Perforadas / ADA',
             turespuesta: undefined
         },
@@ -15,7 +15,7 @@ let TRIVIA = [{
                 'Es una libreria de javascript',
                 'Es una API'
             ],
-            srcImg: 'assets/img/jquery.gif',
+            srcImg: './img/jquery.gif',
             rptaCorrecta: 'Es una libreria de javascript',
             turespuesta: undefined
         },
@@ -27,7 +27,7 @@ let TRIVIA = [{
                 'Compañeros Mark Zuckerberg',
                 'Fundadores de Amazon'
             ],
-            srcImg: 'assets/img/fundadoresGoogle.jpg',
+            srcImg: './img/fundadoresGoogle.jpg',
             rptaCorrecta: 'Los creadores del motor de Google',
             turespuesta: undefined
         },
@@ -39,7 +39,7 @@ let TRIVIA = [{
                 '10 marzo 2001',
                 '2005'
             ],
-            srcImg: 'assets/img/facebook.png',
+            srcImg: './img/facebook.png',
             rptaCorrecta: 'En febrero de 2004',
             turespuesta: undefined
         },
@@ -51,7 +51,7 @@ let TRIVIA = [{
                 'Es una atleta reconocida mundialmente',
                 'Es una modelo de la revista'
             ],
-            srcImg: 'assets/img/marissa.jpg',
+            srcImg: './img/marissa.jpg',
             rptaCorrecta: 'CEO de Yahoo!, y quien logro triplicar su valor.',
             turespuesta: undefined
         }
