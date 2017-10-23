@@ -36,7 +36,7 @@ const App = ({trivia, selectedTriviaIndex}) =>{
         <div className="row">
           <button className="circle-button"><span className="icon icon-list glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
             <header>
-                <h1 id="imagen-arriba"><img src="assets/img/plane.png" id="image"/></h1>
+                <h1 id="imagen-arriba"><img src={trivia[selectedTriviaIndex].srcImg} id="image"/></h1>
             </header>
             <div className="container">
                 <h4><input id="contador-progresivo" type="button" value="0 de 5"/></h4>
@@ -46,12 +46,7 @@ const App = ({trivia, selectedTriviaIndex}) =>{
                 </div>
             </div>
             <div id="question">
-                <div id="intro" className="oculto-intro">
-                    <h1>QUIZ</h1>
-                    <p>Al final veras los resultados</p>
-                    <button className="text-center" onClick="">COMENZAR</button>
-                </div>
-                <div id="one"><h3>{trivia[0].pregunta}</h3>
+                <div id="one"><h3>{trivia[selectedTriviaIndex].pregunta}</h3>
                     <Options
                        option={trivia[selectedTriviaIndex].opciones}
                        selectedTriviaIndex={selectedTriviaIndex}
