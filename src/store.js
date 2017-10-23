@@ -58,7 +58,7 @@ let TRIVIA = [{
     ];
 const initialState = {
 	trivia: TRIVIA,
-	selectedPlayerIndex: -1
+	selectedTriviaIndex: 0
 };
 
 const store = createStore(initialState);
