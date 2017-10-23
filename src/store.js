@@ -5,7 +5,8 @@ let TRIVIA = [{
             opciones: ['tarjetas Perforadas / ADA', 'dev c++', 'FORTRAN ', 'Cobol'],
             srcImg: './img/lenguajeProgramacion.jpg',
             rptaCorrecta: 'tarjetas Perforadas / ADA',
-            turespuesta: undefined
+            turespuesta: undefined,
+            progressBar: 20
         },
         {
             pregunta: "JQuery es: ",
@@ -17,7 +18,8 @@ let TRIVIA = [{
             ],
             srcImg: './img/jquery.gif',
             rptaCorrecta: 'Es una libreria de javascript',
-            turespuesta: undefined
+            turespuesta: undefined,
+            progressBar: 40
         },
         {
             pregunta: "¿Quienes son Larry Page y Sergey Brin?",
@@ -29,7 +31,8 @@ let TRIVIA = [{
             ],
             srcImg: './img/fundadoresGoogle.jpg',
             rptaCorrecta: 'Los creadores del motor de Google',
-            turespuesta: undefined
+            turespuesta: undefined,
+            progressBar: 60
         },
         {
             pregunta: "¿Qué año se creo facebook?",
@@ -41,7 +44,8 @@ let TRIVIA = [{
             ],
             srcImg: './img/facebook.png',
             rptaCorrecta: 'En febrero de 2004',
-            turespuesta: undefined
+            turespuesta: undefined,
+            progressBar: 80
         },
         {
             pregunta: "Quien es Marissa Meyers",
@@ -53,7 +57,8 @@ let TRIVIA = [{
             ],
             srcImg: './img/marissa.jpg',
             rptaCorrecta: 'CEO de Yahoo!, y quien logro triplicar su valor.',
-            turespuesta: undefined
+            turespuesta: undefined,
+            progressBar: 100
         }
     ];
 const initialState = {

@@ -29,6 +29,16 @@ const Options =({option, selectedTriviaIndex, nextQuestion})=>{
   )
 }
 
+const Bar = ({trivia, selectedTriviaIndex}) =>{
+  console.log(trivia);
+  return(
+    <div class="progress">
+      <div id="porcentaje" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" >
+      </div>
+    </div>
+  );
+}
+
 const App = ({trivia, selectedTriviaIndex}) =>{
   console.log(trivia);
   return(
@@ -38,13 +48,9 @@ const App = ({trivia, selectedTriviaIndex}) =>{
             <header>
                 <h1 id="imagen-arriba"><img src={trivia[selectedTriviaIndex].srcImg} id="image"/></h1>
             </header>
-            <div className="container">
-                <h4><input id="contador-progresivo" type="button" value="0 de 5"/></h4>
-                <div className="progress">
-                    <div id="porcentaje" className="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                </div>
-            </div>
+            <Bar
+            trivia={trivia} 
+            />
             <div id="question">
                 <div id="one"><h3>{trivia[selectedTriviaIndex].pregunta}</h3>
                     <Options

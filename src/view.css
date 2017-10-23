@@ -42,7 +42,8 @@
 }
 
 .progress-bar {
-    background-color: salmon;
+    height: 0.2rem;
+    background-color: #4b4668;
 }
 
 img{
