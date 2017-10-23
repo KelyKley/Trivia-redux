@@ -30,7 +30,7 @@ const Options =({option, selectedTriviaIndex, nextQuestion})=>{
 }
 
 const App = ({trivia, selectedTriviaIndex}) =>{
-  console.log('selec->'+selectedTriviaIndex);
+  console.log(trivia);
   return(
     <div id="container">
         <div className="row">
