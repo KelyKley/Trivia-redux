@@ -41,8 +41,7 @@ const App = ({trivia, selectedTriviaIndex}) =>{
             <div className="container">
                 <h4><input id="contador-progresivo" type="button" value="0 de 5"/></h4>
                 <div className="progress">
-                    <div id="porcentaje" className="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                    </div>
+                    <div id="porcentaje" className="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
             <div id="question">
@@ -57,6 +56,22 @@ const App = ({trivia, selectedTriviaIndex}) =>{
         </div>
     </div>
   );
+}
+const YourAnswer = () => {
+  return (
+    <div class="container text-center">
+            <div class="row justify-content-xl-center ">
+                <div id="imagen" class="col col-xl-12"><img src="assets/img/terminaste.gif" class="img-fluid"></div>
+            </div>
+            <div id="cuestionario">
+                <div id="progresos"><div class="progress">            <div class="progress-bar" role="progressbar" style="width: 100%; height: 7px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>            </div></div>
+                <div id="titulos"><h2>Tus Respuestas son: </h2></div>
+                <div id="selecciona"><div class="div-pregunta-respuesta"><p class="parrafoPregunta">1. JQuery es: :</p><p class="parrafoRespuesta"><strong> Es una libreria de javascript</strong></p></div><div class="div-pregunta-respuesta"><p class="parrafoPregunta">2. Quien es Marissa Meyers:</p><p class="parrafoRespuesta"><strong> Es una atleta reconocida mundialmente</strong></p></div><div class="div-pregunta-respuesta"><p class="parrafoPregunta">3. ¿Cual fue el primer lenguaje de Programación?:</p><p class="parrafoRespuesta"><strong> FORTRAN </strong></p></div><div class="div-pregunta-respuesta"><p class="parrafoPregunta">4. ¿Quienes son Larry Page y Sergey Brin?:</p><p class="parrafoRespuesta"><strong> Compañeros Mark Zuckerberg</strong></p></div><div class="div-pregunta-respuesta"><p class="parrafoPregunta">5. ¿Qué año se creo facebook?:</p><p class="parrafoRespuesta"><strong> 10 marzo 2001</strong></p></div></div>
+                <div id="botoncito"><div><button id="resolver">Resolver</button></div></div>
+            </div>
+        </div>
+    </div>
+  )
 }
 
 const mapToProps = ({trivia, selectedTriviaIndex}) => ({trivia, selectedTriviaIndex});
