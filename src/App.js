@@ -30,10 +30,13 @@ const Options =({option, selectedTriviaIndex, nextQuestion})=>{
 }
 
 const Bar = ({trivia, selectedTriviaIndex}) =>{
-  console.log(trivia);
+const divStyle = {
+    width: trivia[selectedTriviaIndex].progressBar + "%",
+  };
+  //console.log(trivia);
   return(
-    <div class="progress">
-      <div id="porcentaje" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" >
+    <div id="progressBar" class="progress">
+      <div id="porcentaje" class="progress-bar progressBar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style={divStyle}>
       </div>
     </div>
   );
@@ -50,6 +53,7 @@ const App = ({trivia, selectedTriviaIndex}) =>{
             </header>
             <Bar
             trivia={trivia} 
+            selectedTriviaIndex={selectedTriviaIndex}
             />
             <div id="question">
                 <div id="one"><h3>{trivia[selectedTriviaIndex].pregunta}</h3>

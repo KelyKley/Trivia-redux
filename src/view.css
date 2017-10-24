@@ -41,6 +41,11 @@
     font-size: 29px;
 }
 
+#progressBar .progress {
+    height: 3px; 
+
+}
+
 .progress-bar {
     height: 0.2rem;
     background-color: #4b4668;
